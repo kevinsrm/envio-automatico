@@ -12,4 +12,4 @@ jobs:
 
     steps:
       - name: Acessando o site e enviando email
-        run: curl -X POST "https://seusite.com/enviar-email.php"
+        run: curl -X POST "http://busines.ct.ws/enviar-email.php"
