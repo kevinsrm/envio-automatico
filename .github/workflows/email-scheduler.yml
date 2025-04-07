@@ -2,7 +2,7 @@ name: Agendador de Emails
 
 on:
   schedule:
-    - cron: '0 12 * * *' # Executa todos os dias ao meio-dia (UTC)
+    - cron: '15 10 * * *' # Executa todos os dias ao meio-dia (UTC)
 
   workflow_dispatch: # Permite execução manual
 
@@ -12,4 +12,7 @@ jobs:
 
     steps:
       - name: Acessando o site e enviando email
-        run: curl -X POST "http://busines.ct.ws/enviaremail.php"
+        run: |
+  curl -X POST \
+       -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+       "http://busines.ct.ws/enviaremail.php"
